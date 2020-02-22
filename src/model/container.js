@@ -34,7 +34,6 @@ export default function WhatsApp({
 
 const styles = StyleSheet.create({
   center: {
-    flex: 1,
     display: "flex",
     alignItems: "center",
     justifyContent: "center",

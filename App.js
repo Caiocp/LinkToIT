@@ -43,14 +43,7 @@ export default function App() {
                             setOpen(false)
                         }
                     }} >
-                        <View style={{
-                            backgroundColor: "#000",
-                            flex: 1,
-                            width: Dimensions.get('window').width,
-                            height: Dimensions.get('window').height,
-                            alignContent: 'center',
-                            justifyContent: 'center',
-                        }} >
+                        <View style={styles.touchableView} >
                             <Route exact path="/">
 
                                 <View style={styles.main}>
@@ -67,9 +60,11 @@ export default function App() {
                             </Route>
                             
                             <Routes />
+
+                            <Navigation style={styles.bottom} />
+
                         </View>
                     </TouchableWithoutFeedback>
-                    <Navigation style={styles.bottom}></Navigation>
                 </View>
             </Provider>
         </NativeRouter>
@@ -82,6 +77,13 @@ const styles = StyleSheet.create({
         backgroundColor: "#035AA6",
         alignItems: "center",
         position: "relative",
+    },
+    touchableView:{
+        flex: 1,
+        alignContent: 'center',
+        justifyContent: 'center',
+        flexDirection: 'column',
+        width: '100%'
     },
     sidebar: {
         backgroundColor: "powderblue",

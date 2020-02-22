@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { TouchableOpacity, Text, StyleSheet } from 'react-native'
+import { TouchableOpacity, Text, StyleSheet, Button } from 'react-native'
 import { Form } from "@unform/mobile";
 import Input from "./Input";
 
@@ -8,16 +8,14 @@ export default function SignIn() {
 
   function handleSubmit(data) {
     console.log(data);
-    // { email: 'test@example.com', password: '123456' }
   }
 
   return (
-    <Form label="Email" name="email" type="email" >
-        <Input label="Senha" name="password" type="password" /> 
-        <Input label="Senha" name="password" type="password" />
+    <Form ref={formRef} onSubmit={handleSubmit} >
+        <Input label="Nome" name="name" type="text" /> 
 
-        <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText}>Submit</Text> 
+        <TouchableOpacity onPress={() => formRef.current.submitForm()} style={styles.button}>
+            <Text  style={styles.buttonText}>Submit</Text> 
         </TouchableOpacity>
     </Form>
   );

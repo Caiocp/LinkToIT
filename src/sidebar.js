@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Dimensions, StatusBar, Animated, Text, Keyboard } from "react-native";
 import SignIn from "./form";
 
-const bar = Dimensions.get("window").width / 2
+const bar = Dimensions.get("window").width / 1.25
 
 const SideBar = ({ style, open = false, children }) => {
   const [wdt] = useState(new Animated.Value(0)); // Initial value for opacity: 0
