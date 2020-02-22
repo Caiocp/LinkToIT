@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity, Alert } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, Alert, Dimensions } from "react-native";
 
 import QRCode from "react-native-qrcode-svg";
 
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    marginBottom: 150
+    marginBottom: 150,
   },
 
   titleText: {
